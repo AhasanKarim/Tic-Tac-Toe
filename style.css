@@ -1,0 +1,87 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/*setting color code to a variable*/
+:root {
+    --orange: #F2C14E;
+    --winning-blocks: #2d414b;
+}
+
+
+/*Writings characteristics*/
+body{
+    color: var(--orange);
+    font-family: 'Finger Paint', cursive;
+}
+
+/*header*/
+h1{
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+/*body container tag*/
+.container{
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#31454F ;
+
+}
+
+#gameboard{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/*3x3 table*/
+.box{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--orange);
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    
+
+}
+
+/*Removing border for the right most boxes*/
+.box:nth-child(3n){
+    border-right: none;
+}
+
+/*Removing border for the bottom most boxes*/
+.box:nth-child(6) ~ .box{
+    border-bottom: none;
+}
+
+/*Styling Button*/
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: #333;
+    border-color: var(--orange);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+}
+
+/*Button Effects*/
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
